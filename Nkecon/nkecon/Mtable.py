@@ -22,11 +22,18 @@ class Mtable:
 			for line in self.in_file:
 				add = self.parse_csv_line(line.strip(" "))
 				self.row.append(add)
-		for i in range(len(self.row)):
-			for j in range(len(self.row[i])):
-				try:
-					item = self.row[i][j]
-					
+		# get max row length
+		max_len = 0
+		for row in self.row:
+			if max_len<len(row):
+				max_len=len(row)
+		# create self.col
+		for i in range(max_len):
+			self.col.append([])
+		# add all elements to correct colomn 
+		for i in range(self.row):
+			for j in range(self.row[i]):
+				self.col[j].append(self.row[i][j])
 	# parse a line of csv
 	def parse_csv_line(self,line=""):
 		return line.split(',')

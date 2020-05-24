@@ -1,14 +1,14 @@
 from setuptools import setup
 
 setup(
-	dependency_links=['https://github.com/nkevy/libnk_py.git#egg=package-1.0']
-	version = '1.0',
-	name='libnk_py',
-	description='library of python modudles',
+	name='Nkecon',
+	version = '0.0',
+	packages = ['nkecon'],
+	license='Creative Commons Attribution-Noncommercial-Share Alike license',
+	long_description=open('README.txt').read(),
+	description='python moduls for economic tasks',
 	url='https://github.com/nkevy/libnk_py.git',
 	author='noah kevy',
-	license='nk',
 	author_email='yvek.com@gmail.com',
-	packages = ['Econ'],
-	install_requires=['os'],
-	zip_safe=False)
+	zip_safe=False,
+)

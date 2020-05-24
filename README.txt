@@ -13,7 +13,7 @@ To install packages:
 		cd Nkecon
 
 	3. Add the package to pip:
-		pip install -e .
+		sudo pip install -e .
 
 Packages
 --------
