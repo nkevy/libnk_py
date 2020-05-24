@@ -41,22 +41,30 @@ class Mtable:
 	def parse_tsv_line(self,line=""):
 		return line.split('\t')
 	# getter for row
-	def get_row(self,index=0):
+	def get_row(self,index=None):
+		if index is None:
+			return self.row
 		if index>=len(self.row):
 			return None
 		return self.row[index]
 	# getter for col
-	def get_col(self,index=0):
+	def get_col(self,index=None):
+		if index is None:
+			return self.col
 		if index>=len(self.col):
 			return None
 		return self.col[index]
 	# getter for rcomp
-	def get_ccomp(self,index=0):
+	def get_ccomp(self,index=None):
+		if index is None:
+			return self.ccomp
 		if index>=len(self.ccomp):
 			return None
 		return self.ccomp[index]
 	# getter for ccomp
-	def get_rcomp(self,index=0):
+	def get_rcomp(self,index=None):
+		if index is None:
+			return self.rcomp
 		if index>=len(self.rcomp):
 			return None
 		return self.rcomp[index]
