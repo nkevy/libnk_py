@@ -31,8 +31,8 @@ class Mtable:
 		for i in range(max_len):
 			self.col.append([])
 		# add all elements to correct colomn 
-		for i in range(self.row):
-			for j in range(self.row[i]):
+		for i in range(len(self.row)):
+			for j in range(len(self.row[i])):
 				self.col[j].append(self.row[i][j])
 	# parse a line of csv
 	def parse_csv_line(self,line=""):
