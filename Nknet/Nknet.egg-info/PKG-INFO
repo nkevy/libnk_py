@@ -1,0 +1,28 @@
+Metadata-Version: 1.0
+Name: Nknet
+Version: 0.0
+Summary: python modules for net analysis
+Home-page: UNKNOWN
+Author: Noah Kevy
+Author-email: yvek.com@gmail.com
+License: Creative Commons Attribution-Noncommercial-Share Alike license
+Description: ===========
+        Nknet
+        ==========
+        The Nknet library contains python modules to preform network analysis.
+        A typical usgae might look like the following example:
+        
+        	from nknet.Nettool import Nettool
+        	
+        	nt = Nettool()
+        	ip = nt.get_local_ip()
+        	ip_list = nt.get_all_local_ip()
+        	
+        (note: The example does not follow python indetation conventions and thus is only a model)
+        
+        Git Repository
+        --------------
+        The Nknet package lives in the github ropository 'libnk_py<https://github.com/nkevy/libnk_py>'_.
+        
+        
+Platform: UNKNOWN

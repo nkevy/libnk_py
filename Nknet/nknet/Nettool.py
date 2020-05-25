@@ -11,26 +11,38 @@ class Nettool:
 	def get_local_ip(self):
 		if self.local_ip is not None:
 			return self.local_ip
-		self.local_ip=socket.gethostbyname(socket.gethostname())
+		ifconfig_list=subprocess.check_output(['ifconfig']).split('inet ')
+		ip=[]
+		for chunk in ifconfig_list:
+			line_list=chunk.split('\n')
+			for line in line_list:
+				word_list=line.split(' ')
+				for word in word_list: 
+					if '.' in word:
+						ip.append(word)
+		ip.pop()
+		self.local_ip=ip
 		return self.local_ip
 	# get all ip address on the local subnet 
 	def get_all_local_ip(self):
 		if self.all_local_ip is not None:
 			return self.all_local_ip
 		arp_list=subprocess.check_output(['arp','-a']).split('\n')
+		arp_list.pop()
 		ip_list=[]
-		word_list=[]
-		for i in len(arp_list):
-			line = arp_list[i].split(' ')
-			word_list.append(line)
+		i=0
+		for line in arp_list:
+			word_list=line.split(' ')
 			ip_list.append([])
-			for j in range(len(word_list)):
-				if '.' in word_list[j]:
-					ip=str(temp[j])
+			for word in word_list:
+				if '.' in word:
+					ip=str(word)
 					ip=ip.strip('(')
 					ip=ip.strip(')')
 					ip_list[i].append(ip)
-				if ':' in word_list[j]:
-					mac=str(temp[j])
+				if ':' in word:
+					mac=str(word)
 					ip_list[i].append(mac)
-		return self.all_local_ip=ip_list
+			i+=1
+		self.all_local_ip=ip_list
+		return self.all_local_ip
