@@ -17,4 +17,4 @@ useage looks like:
 (note: The above does not follow python indenting and is thus only a model.)
 Git Repositrory:
 ----------------
-The Nkecon package lives in a repository of packages on github, 'libnk_py <https://github.com/nkevy/libnk_py/tree/master>'_.
+The Nkecon package lives in a repository of packages on github, 'libnk_py <https://github.com/nkevy/libnk_py>'_.
