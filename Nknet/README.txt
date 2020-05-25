@@ -14,5 +14,5 @@ A typical usgae might look like the following example:
 
 Git Repository
 --------------
-The Nknet package lives in the github ropository 'libnk_py<https://github.com/nkevy/libnk_py>'_.
+The Nknet package lives in the github ropository 'libnk_py <https://github.com/nkevy/libnk_py>'_.
 
