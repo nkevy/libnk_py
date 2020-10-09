@@ -14,7 +14,4 @@ useage looks like:
 	mt.complete_table()
 	mt.export("my_completed.csv")
 
-(note: The above does not follow python indenting and is thus only a model.)
-Git Repositrory:
-----------------
-The Nkecon package lives in a repository of packages on github, 'libnk_py <https://github.com/nkevy/libnk_py>'_.
+note: The above does not follow python indenting and is thus only a model.
